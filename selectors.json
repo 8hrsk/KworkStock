@@ -1,0 +1,6 @@
+{
+    "stockSelector": "#app > div > div.centerwrap.page-projects.pt0.page-projects--new > div.wants-filter-content.wants-filter-content--switcher > div.wants-content > div > div:nth-child(1)",
+    "stockNameSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__left > div.wants-card__header-title.breakwords.pr250 > a",
+    "stockPreferredPriceSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__right.m-hidden > div.wants-card__header-right-block > div.wants-card__header-controls.projects-list__icons > div.wants-card__header-price.wants-card__price.m-hidden > span:nth-child(2)",
+    "stockMaxPriceSelector": ""
+}
