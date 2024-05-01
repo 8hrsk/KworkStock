@@ -1,6 +1,11 @@
 {
-    "stockSelector": "#app > div > div.centerwrap.page-projects.pt0.page-projects--new > div.wants-filter-content.wants-filter-content--switcher > div.wants-content > div > div:nth-child(1)",
+    "stockSelector": "#app > div > div.centerwrap.page-projects > div.wants-filter-content > div.wants-content > div > div:nth-child(1)",
     "stockNameSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__left > div.wants-card__header-title.breakwords.pr250 > a",
     "stockPreferredPriceSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__right.m-hidden > div.wants-card__header-right-block > div.wants-card__header-controls.projects-list__icons > div.wants-card__header-price.wants-card__price.m-hidden > span:nth-child(2)",
-    "stockMaxPriceSelector": ""
+    "stockMaxPriceSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__right.m-hidden > div.wants-card__description-higher-price > span > span",
+    "stockContentSelector": "div.card__content.pb5 > div.mb15 > div.d-flex.relative > div.wants-card__left > div.wants-card__description-text.br-with-lh > div.breakwords.first-letter.overflow-hidden > div.d-inline",
+    "stockPayerNameSelector": "div.card__content.pb5 > div.mb10.want-payer-statistic.d-flex > div > div:nth-child(1) > div > a",
+    "stockTimeLeftSelector": "div.card__content.pb5 > div.query-item__info-wrap > div.query-item__info > div.force-font.force-font--s12.mr8 > span",
+    "stockOffersSelector": "div.card__content.pb5 > div.query-item__info-wrap > div.query-item__info > div.force-font.force-font--s12.mr8 > span:nth-child(2)",
+    "stockCategory": "#app > div > div.centerwrap.page-projects > div.wants-filter-content > div.wants-left-side > div.projects-filter.wants-filter.wants-filter-sidebar > div:nth-child(1) > div.projects-filter__rubrics-list > div > ul > li > span > div > span.multilevel-list__label-title"
 }
