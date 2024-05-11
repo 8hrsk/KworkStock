@@ -1,4 +1,4 @@
-const Telegraf = require('telegraf');
+const { Telegraf } = require('telegraf');
 
 class Bot {
     constructor(token, channelId) {
@@ -8,6 +8,10 @@ class Bot {
 
     send(message) {
         this.bot.telegram.sendMessage(this.channel, message, { parse_mode: 'HTML' });
+    }
+
+    sendToChanel() {
+        this.bot.telegram.sendMessage(this.channel, 'test', { parse_mode: 'HTML' });
     }
 
     sendWithPhoto(photo, message) {
