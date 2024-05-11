@@ -1,5 +1,6 @@
 const Parser = require('./parser/ParserV4');
 const MessageConstructor = require('./bot/MessageConstructor');
+const KworkManager = require('./Database/KworkManager');
 
 const sleep = (ms) => {
     return new Promise((resolve) => {
@@ -8,10 +9,12 @@ const sleep = (ms) => {
 }
 
 class Interface {
-    constructor(links) {
+    constructor(links, user, host, database, password) {
         this.links = links;
         this.parser = new Parser();
         this.messageConstructor = MessageConstructor;
+        this.kworkManager = new KworkManager(user, host, database, password);
+
         this.data = [];
         this.messages = [];
     }
@@ -92,6 +95,10 @@ class Interface {
 
             this.messages.push(message);
         })
+    }
+
+    checkLastKwork(category) {
+        return Boolean;
     }
 }
 
