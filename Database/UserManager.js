@@ -1,11 +1,15 @@
-const Database = require('./Database');
+class UserManager {
+    constructor(DatabaseConnection) {
+        this.db = DatabaseConnection
+    }
 
-class UserManager extends Database {
     getUserByTelegramID(telegramID, callback) {}
 
     getUserByID(id, callback) {}
 
-    getSubs(callback) {}
+    getSubs(callback) {
+        this.db
+    }
 
     getUsersByCategory(category, callback) {}
 

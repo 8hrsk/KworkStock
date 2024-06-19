@@ -2,9 +2,11 @@ const links = require('./links.json'); // kwork links
 const Bot = require('./bot/Bot'); // telegram Bot
 const Interface = require('./Interface'); // kwork telegram channel interface
 const UserInterface = require('./UserInterface');
+const MessageHandler = require('./bot/MessageHandler');
 
-const KworkManager = require('./Database/KworkManager'); // kwork manager Db
-const UserManager = require('./Database/UserManager'); // user manager Db
+// const Database = require('./Database/Database'); // Connection to database
+// const KworkManager = require('./Database/KworkManager'); // kwork manager Db
+// const UserManager = require('./Database/UserManager'); // user manager Db
 
 require('dotenv').config();
 
@@ -15,13 +17,15 @@ const DatabaseConnectionData = {
     password: process.env.DB_PASSWORD
 }
 
-const kworkManager = new KworkManager(DatabaseConnectionData)
-const userManager = new UserManager(DatabaseConnectionData)
+// const DatabaseConnection = new Database(DatabaseConnectionData)
+
+// const kworkManager = new KworkManager(DatabaseConnection)
+// const userManager = new UserManager(DatabaseConnection)
 
 const bot = new Bot(process.env.TELEGRAM_BOT_TOKEN, process.env.TELEGRAM_CHANNEL_NAME);
 
 const interface = new Interface(links);
-const userInterface = new UserInterface();
+// const userInterface = new UserInterface();
 
 const ChannelInterval = setInterval(() => {
     interface.start((messages) => {
@@ -34,3 +38,5 @@ const ChannelInterval = setInterval(() => {
 const UserInterval = setInterval(() => {
 
 }, 60000)
+
+console.log('working...');

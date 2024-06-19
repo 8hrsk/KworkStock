@@ -1,6 +1,7 @@
-const Database = require('./Database');
-
-class KworkManager extends Database {
+class KworkManager {
+    constructor(DatabasaeConnection) {
+        this.db = DatabasaeConnection
+    }
 
     getLastID(category, callback) {
         

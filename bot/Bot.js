@@ -1,15 +1,18 @@
 const { Telegraf } = require('telegraf');
-
-const sleep = (ms) => {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms)
-    })
-}
+const MessageHandler = require('./MessageHandler');
 
 class Bot {
     constructor(token, channelId) {
         this.bot = new Telegraf(token);
         this.channel = channelId;
+
+        this.messageHandler = new MessageHandler(this.bot)
+
+        this.bot.on('message', (ctx) => {
+            this.messageHandler.handle(ctx);
+        });
+
+        this.bot.launch();
     }
 
     async send(message) {
@@ -34,6 +37,14 @@ class Bot {
                 console.log(error);
             }
         })
+    }
+
+    telegram(callback) {
+        return this.bot
+    }
+
+    async sendToChatID(telegramChatID, message) {
+        this.bot.telegram.sendMessage(telegramChatID, message, { parse_mode: 'HTML' });
     }
 }
 
